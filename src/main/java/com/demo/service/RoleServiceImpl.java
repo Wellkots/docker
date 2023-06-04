@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.demo.repository.RoleRepository;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -17,9 +18,8 @@ public class RoleServiceImpl implements RoleService {
         this.roleRepository = roleRepository;
     }
 
-    @Transactional
-    public Set<Role> findAll() {
-        return new HashSet<>(roleRepository.findAll());
+    public List<Role> findAll() {
+        return roleRepository.findAll();
     }
 
     public Role findByName(String name) {
@@ -32,6 +32,6 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public Role findById(Long id) {
-        return roleRepository.findById(Math.toIntExact(id)).orElse(null);
+        return roleRepository.findById(id);
     }
 }

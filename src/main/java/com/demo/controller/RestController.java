@@ -29,6 +29,7 @@ public class RestController {
         return users != null && !users.isEmpty()
                 ? new ResponseEntity<>(users, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
     }
 
     @GetMapping("/users/{id}")
@@ -63,7 +64,7 @@ public class RestController {
     }
 
     @GetMapping("/roles")
-    public ResponseEntity<Set<Role>> getAllRoles() {
+    public ResponseEntity<List<Role>> getAllRoles() {
         return new ResponseEntity<>(roleService.findAll(), HttpStatus.OK);
     }
 

@@ -1,0 +1,13 @@
+com\demo\service\UserService.class
+com\demo\repository\UserRepository.class
+com\demo\Application.class
+com\demo\repository\RoleRepository.class
+com\demo\controller\RestController.class
+com\demo\model\User.class
+com\demo\service\RoleServiceImpl.class
+com\demo\config\MvcConfig.class
+com\demo\config\SuccessUserHandler.class
+com\demo\service\UserServiceImpl.class
+com\demo\model\Role.class
+com\demo\config\WebSecurityConfig.class
+com\demo\service\RoleService.class

@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "users")
+@Table(name = "users3")
 @Getter
 @Setter
 @ToString
@@ -45,7 +45,7 @@ public class User implements UserDetails {
    private String username;
 
 
-   @NotEmpty(message = "Roles should not be empty")
+
    @ManyToMany(fetch = FetchType.LAZY)
    @JoinTable(
            name = "users_roles",

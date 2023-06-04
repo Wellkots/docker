@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="4af89f88-f858-432b-847c-cc80be1b48a7" name="user@localhost Mapping">
+      <data-sources db="57997a66-65f8-4a92-97d2-967695d9aa07" />
+      <scope>
+        <node kind="database" qname="@">
+          <node kind="schema" qname="@" />
+        </node>
+      </scope>
+    </mapping>
+    <mapping uuid="291c7caf-f5bc-4f8a-afb6-9c1133e39580" name="users@localhost Mapping">
+      <data-sources db="a81fd4b2-d7d0-4f44-9c96-edf6b13e81c4" />
+      <scope>
+        <node kind="database" qname="@">
+          <node kind="schema" qname="@" />
+        </node>
+      </scope>
+    </mapping>
+  </component>
+</project>

@@ -19,24 +19,23 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder bCryptPasswordEncoder;
 
-    public UserServiceImpl(UserRepository userRepository, @Lazy PasswordEncoder bCryptPasswordEncoder) {
+    public UserServiceImpl(UserRepository userRepository, PasswordEncoder bCryptPasswordEncoder) {
         this.userRepository = userRepository;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
-    @Transactional
-    public User findById(Long id) {
+      public User findById(Long id) {
         return userRepository.findById(id).orElse(null);
     }
 
-    @Transactional
-    public List<User> findAll() {
+     public List<User> findAll() {
         return userRepository.findAll();
     }
 
     @Transactional
     public void saveUser(User user) {
             user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+
             userRepository.saveAndFlush(user);
     }
 
@@ -57,8 +56,8 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     }
 
 
+
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return userRepository.findByUsername(username);
     }
-
 }
